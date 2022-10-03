@@ -1,38 +1,132 @@
-.App {
-  text-align: center;
+* {
+  padding: 0px;
+  margin: 0px;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+section {
+  padding: 80px 0px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.nav-color {
   color: white;
 }
+.bg-light {
+  background-color: #a9a9a975 !important;
+}
+span.cart-icon {
+  font-size: 27px;
+  margin-right: 61px;
+  margin-left: 12px;
+}
+.nav-heading {
+  margin-left: 74px;
+}
+/**************** contact component css***************************/
 
-.App-link {
-  color: #61dafb;
+.contact-heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 73px;
+}
+.contact-form-input {
+  width: 300px;
+  margin-bottom: 35px;
+}
+.Description-contact {
+  height: 100px;
+}
+.contact-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 48px;
+}
+.contact-btn {
+  margin-left: 102px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/*************Home component css*****************************/
+
+.home-section {
+  width: 100%;
+  padding: 50px 0;
+}
+.home-section .img-Home {
+  width: 50%;
+}
+.img-height {
+  height: 276px;
+}
+
+.home-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.home-content {
+  width: 50%;
+  margin-left: 143px;
+  padding: 0px 113px;
+}
+.btn-home {
+  margin-top: 25px;
+}
+
+.featues {
+  width: 100%;
+  padding: 50px 0;
+  background-color: darkgrey;
+}
+.card-iphone {
+  border-radius: 20px;
+  padding: 26px;
+  box-shadow: -3px 8px 20px -21px #00000066;
+  background: #fff;
+  margin-left: 14px;
+  margin-bottom: 17px;
+  width: 26%;
+}
+.card-samsung {
+  width: 33%;
+}
+.card-watch {
+  width: 33%;
+}
+.feature-serivices {
+  display: flex;
+  width: 100%;
+  margin: 50px 0px;
+  flex-wrap: wrap;
+}
+.feature-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+.feature-heading {
+  margin-bottom: 56px;
+  align-items: center;
+  justify-content: center;
+  display: grid;
+}
+.feature-services {
+  padding-bottom: 38px;
+}
+
+/******************* Login Page******************/
+.login-data {
+  justify-content: center;
+  align-items: center;
+  display: grid;
+  margin-top: 84px;
+}
+
+.submit-btn {
+  margin-left: 79px;
 }
