@@ -1,4 +1,5 @@
 import React from "react";
+import { Footer } from "../common/Footer";
 import { DashboardLayout } from "./DashboardLayout";
 
 export const Contact = () => {
@@ -41,6 +42,7 @@ export const Contact = () => {
             </form>
           </div>
         </div>
+        <Footer />
       </>
     </DashboardLayout>
   );
