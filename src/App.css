@@ -3,7 +3,7 @@
   margin: 0px;
 }
 section {
-  padding: 80px 0px;
+  padding: 80px 0px 30px;
 }
 .nav-color {
   color: white;
@@ -23,6 +23,20 @@ a:hover {
   cursor: pointer;
   text-transform: uppercase;
   text-decoration: underline;
+}
+.nav-item {
+  padding: 0px 20px;
+}
+.navbar_heading {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+.navbar_home {
+  display: flex;
+  align-items: center;
+  /* margin-left: 717px; */
 }
 
 /**************** contact component css***************************/
@@ -46,21 +60,10 @@ a:hover {
   align-items: center;
   margin: 48px;
 }
-.contact-btn {
-  margin-left: 102px;
-}
 
 /*************Home component css*****************************/
-
-.home-section {
-  width: 100%;
-  padding: 50px 0;
-}
-.home-section .img-Home {
-  width: 50%;
-}
-.img-height {
-  height: 276px;
+.home_space {
+  margin-left: 60px;
 }
 .img-iphone:hover {
   opacity: 0.5;
@@ -79,19 +82,21 @@ a:hover {
 .btn-home {
   margin-top: 25px;
 }
+.space_cards {
+  margin-bottom: 22px;
+}
 
 .featues {
   width: 100%;
   padding: 86px 0;
-  background-color: darkgrey;
+  background-color: #a9a9a959;
 }
 .card-iphone {
   border-radius: 20px;
   padding: 26px;
   box-shadow: -3px 8px 20px -21px #00000066;
   background: #fff;
-  margin-left: 14px;
-  margin-bottom: 17px;
+
   width: 26%;
 }
 .card-samsung {
@@ -119,7 +124,6 @@ a:hover {
   margin-top: 15px;
 }
 .feature-heading {
-  margin-bottom: 56px;
   align-items: center;
   justify-content: center;
   display: grid;
@@ -127,20 +131,55 @@ a:hover {
 .feature-services {
   padding-bottom: 38px;
 }
+
+@media screen and (max-width: 768px) {
+  .home_space {
+    margin-left: 60px;
+    font-size: 14px;
+  }
+  .btn-home {
+    font-size: 10px;
+  }
+  .img-Home {
+    text-align: center;
+    width: 342px;
+  }
+  .home_heading {
+    font-size: 18px;
+  }
+  .card-iphone {
+    border-radius: 20px;
+    padding: 26px;
+    box-shadow: -3px 8px 20px -21px #00000066;
+    background: #fff;
+    width: 45%;
+  }
+  .feature-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .card_margin {
+    margin-top: 21px;
+  }
+}
+
 /*********************comapnies section css**************************/
 
 .companies {
-  background-color: #a9a9a9f0;
+  background-color: #a9a9a959;
+  margin-bottom: 64px;
 }
 .companies-count {
   align-items: center;
   justify-content: center;
   display: flex;
 }
-.c-img {
-  height: 62px;
-  width: 84px;
-  margin-left: 191px;
+.company-img {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 }
 /******************* Login Page******************/
 .login-data {
@@ -157,15 +196,12 @@ a:hover {
 /***************** footer Section css*********************/
 .footer-section {
   background-color: rgb(34, 34, 38);
-  margin-top: 200px;
+  /* margin-top: 200px; */
 }
 .color-footer {
   color: white;
-  padding: 1px 54px;
 }
-.footer-wrapper {
-  padding: 102px 165px;
-}
+
 input#exampleInputEmail1 {
   margin-bottom: 18px;
 }
@@ -178,25 +214,27 @@ input#exampleInputEmail1 {
 }
 .line-hr {
   color: white;
+  margin: 60px 0px;
 }
 .footer-bottom {
   color: #fff;
 }
 .footer-policy {
   color: #fff;
+  display: flex;
 }
 .footer-style {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  margin-top: 50px;
 }
 .footer-upper-wrapper {
   /* border: 1px solid red; */
-  padding: 45px;
-  margin-top: -128px;
+  /* padding: 45px; */
+  /* margin-top: -128px; */
   background-color: white;
-  width: 786px;
-  margin-left: 229px;
+
   background-color: #e7ebed;
   border-radius: 10px;
 }
@@ -204,7 +242,6 @@ input#exampleInputEmail1 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: -29px 0px;
 }
 .number:hover {
   color: white;
@@ -213,42 +250,95 @@ input#exampleInputEmail1 {
 /********************payment section css*****************************/
 .payment {
   width: 100%;
+  margin-bottom: 36px;
 }
-.box-cards {
-  border-radius: 20px;
-  padding: 30px;
-  box-shadow: -3px 8px 20px -21px #00000066;
-  background: #fff;
-  background-color: #a9a9a940;
-  margin-bottom: 17px;
-  height: 244px;
-  width: 273px;
-  margin-left: 137px;
-  margin-top: 23px;
+/*   */
+.cards-items {
+  background-color: #a9a9a959;
+  height: 200px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
 }
 .truck-img {
   background-color: white;
-  width: 73px;
-  border-radius: 55px;
-  margin: 27px 56px;
+  border-radius: 50%;
+  padding: 13px;
+  height: 70px;
+  width: 70px;
 }
-.abc {
-  margin-top: 27px;
+.display_flex {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.cards-items p {
+  padding-top: 25px;
+}
+
+@media screen and (max-width: 768px) {
+  .display_flex {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 27px;
+  }
+  .cards-items {
+    background-color: #a9a9a959;
+    height: 200px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    margin-top: 29px;
+  }
+}
+.sidebar {
+  height: 100vh;
+
+  background-color: #a9a9a959;
+}
+
+.featuess {
+  width: 100%;
+}
+.cards-iphonee {
   border-radius: 20px;
-  border-radius: 8px;
-  height: 96px;
-  width: 273px;
-  margin-bottom: 55px;
-  margin-left: 124px;
-  background-color: #a9a9a940;
+  padding: 26px;
 }
-.small-img {
-  background-color: white;
-  width: 73px;
-  border-radius: 24px;
-  margin: 22px 19px;
+.features-serivice {
+  display: flex;
+  width: 100%;
+  margin: 50px 0px;
+  flex-wrap: wrap;
 }
-.money {
-  margin-top: -58px;
-  margin-left: 91px;
+.features-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 3px 2px 15px 6px #00000029;
+  border-radius: 13px;
+}
+.features-service {
+  margin-bottom: 21px;
+}
+.search_bar {
+  width: 218px;
+  margin: 30px auto;
+}
+.sidebar h4 {
+  font-size: 20px;
+  padding: 40px 10px 20px 21px;
+}
+.sidebar li {
+  list-style: none;
+  padding: 15px 5px;
+  font-size: 16px;
+  font-weight: 500;
+}
+.sidebar_btn {
+  margin-left: 22px;
 }

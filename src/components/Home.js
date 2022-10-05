@@ -22,28 +22,34 @@ const Home = () => {
       <>
         <section className="home-section">
           <div className="container">
-            <div className="home-wrapper">
-              <div className="home-content">
-                <p>
-                  welcome to <h3> Store</h3>
-                </p>
-                <small>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum is simply dummy text of the
-                  printing and typesetting industry.
-                </small>
-                <div>
-                  <button
-                    type="button"
-                    class="btn btn-secondary btn-home"
-                    onClick={() => navigate("/products")}
-                  >
-                    Shop Now
-                  </button>
+            <div className="home_page">
+              <div className="row ">
+                <div className="col-lg-6 ">
+                  <div className="home_space">
+                    <p>
+                      welcome to <h3 className=""> Store</h3>
+                    </p>
+                    <small>
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry. Lorem Ipsum is simply dummy text of
+                      the printing and typesetting industry.
+                    </small>
+                    <div>
+                      <button
+                        type="button"
+                        class="btn btn-secondary btn-home"
+                        onClick={() => navigate("/products")}
+                      >
+                        Shop Now
+                      </button>
+                    </div>
+                  </div>
                 </div>
-              </div>
-              <div className="img-Home">
-                <img src={img1} className="img-height" />
+                <div className="col-lg-6">
+                  <div className="img-Home">
+                    <img src={img1} width="70%" />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -52,7 +58,7 @@ const Home = () => {
         <section className="featues">
           <div className="container">
             <div className="feature-services">
-              <div className="feature-heading">
+              <div className=" mb-3 feature-heading">
                 <p>check Now</p>
                 <h4>Our Feature Services</h4>
               </div>
@@ -75,7 +81,7 @@ const Home = () => {
                     </div>
                   </div>
                 </div>
-                <div className="card-iphone">
+                <div className="card-iphone card_margin">
                   <div className="cards-space">
                     <img src={img4} width="100%" className="img-iphone" />
                     <div className="card-footer">
@@ -92,24 +98,30 @@ const Home = () => {
         <section className="payment">
           <div className="container">
             <div className="payment-wrapper">
-              <div className="row">
-                <div className="col-lg-4 box-cards">
-                  <img src={img5} width="100%" className="truck-img" />
-                  <p>Super Fast and Free Delivery</p>
+              <div className="row justify-content-center align-items-center">
+                <div className="col-lg-4">
+                  <div className="cards-items">
+                    <img src={img5} width="100px" className="truck-img" />
+                    <p className="mb-0">Super Fast and Free Delivery</p>
+                  </div>
                 </div>
                 <div className="col-lg-4">
-                  <div className="row abc ">
-                    <img src={img8} width="100%" className="small-img" />
-                    <p className="money">Money Back gurantee</p>
-                  </div>
-                  <div className="row abc ">
-                    <img src={img7} width="100%" className="small-img" />
-                    <p className="money">Money Back gurantee</p>
+                  <div>
+                    <div className="display_flex cards-items py-3 space_cards">
+                      <img src={img8} width="30px" className="truck-img" />
+                      <p className="pt-0 mb-0">Money Back gurantee</p>
+                    </div>
+                    <div className="display_flex cards-items py-3">
+                      <img src={img7} width="30px" className="truck-img" />
+                      <p className="pt-0 mb-0">Money Back gurantee</p>
+                    </div>
                   </div>
                 </div>
-                <div className="col-lg-4 box-cards">
-                  <img src={img6} width="100%" className="truck-img" />
-                  <p>Super Secure Payment System</p>
+                <div className="col-lg-4">
+                  <div className="cards-items">
+                    <img src={img6} width="100px" className="truck-img" />
+                    <p>Super Secure Payment System</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -121,10 +133,10 @@ const Home = () => {
               <div className="companies-content">
                 <p className="companies-count">Trusted by 1000+ companies</p>
                 <div className="company-img">
-                  <img src={img9} width="100%" className="c-img" />
-                  <img src={img10} width="100%" className="c-img" />
-                  <img src={img11} width="100%" className="c-img" />
-                  <img src={img12} width="100%" className="c-img" />
+                  <img src={img9} width="100px" className="c-img" />
+                  <img src={img10} width="100px" className="c-img" />
+                  <img src={img11} width="100px" className="c-img" />
+                  <img src={img12} width="100px" className="c-img" />
                 </div>
               </div>
             </div>

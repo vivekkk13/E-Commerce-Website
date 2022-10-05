@@ -11,28 +11,34 @@ export const About = () => {
       <>
         <section className="home-section">
           <div className="container">
-            <div className="home-wrapper">
-              <div className="home-content">
-                <p>
-                  welcome to <h2> E-Commerce Website</h2>
-                </p>
-                <small>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum is simply dummy text of the
-                  printing and typesetting industry.
-                </small>
-                <div>
-                  <button
-                    type="button"
-                    class="btn btn-secondary btn-home"
-                    onClick={() => navigate("/products")}
-                  >
-                    Shop Now
-                  </button>
+            <div className="home_page">
+              <div className="row">
+                <div className="col-lg-6">
+                  <div className="home_space">
+                    <p>
+                      welcome to <h3> Store</h3>
+                    </p>
+                    <small>
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry. Lorem Ipsum is simply dummy text of
+                      the printing and typesetting industry.
+                    </small>
+                    <div>
+                      <button
+                        type="button"
+                        class="btn btn-secondary btn-home"
+                        onClick={() => navigate("/products")}
+                      >
+                        Shop Now
+                      </button>
+                    </div>
+                  </div>
                 </div>
-              </div>
-              <div className="img-Home">
-                <img src={img1} className="img-height" />
+                <div className="col-lg-6">
+                  <div className="img-Home">
+                    <img src={img1} width="70%" />
+                  </div>
+                </div>
               </div>
             </div>
           </div>

@@ -7,7 +7,7 @@ export const Footer = () => {
     <>
       <section className="footer-section">
         <div className="container">
-          <div className="footer-upper-wrapper">
+          {/* <div className="footer-upper-wrapper">
             <div className="footer-content">
               <p>
                 Ready to get started? <br />
@@ -22,10 +22,10 @@ export const Footer = () => {
                 Get Started
               </button>
             </div>
-          </div>
+          </div> */}
           <div className="footer-wrapper">
             <div className="row">
-              <div className="col-md-3 color-footer">
+              <div className="col-lg-3 color-footer">
                 <h6>Ecommerce website</h6>
                 <small>
                   {" "}
@@ -33,7 +33,7 @@ export const Footer = () => {
                   typesetting industry.
                 </small>
               </div>
-              <div className="col-md-3 color-footer">
+              <div className="col-lg-3 color-footer">
                 <p>Subscribe to get important notes</p>
                 <div class="form-group">
                   <input
@@ -46,7 +46,7 @@ export const Footer = () => {
                 </div>
                 <button className="btn btn-secondary"> Subscribe</button>
               </div>
-              <div className="col-md-3 color-footer">
+              <div className="col-lg-3 color-footer">
                 <small>Follow us</small>
                 <div className="icon-wrapper">
                   <div className="icons-icon">
@@ -57,7 +57,7 @@ export const Footer = () => {
                   </div>
                 </div>
               </div>
-              <div className="col-md-3 color-footer">
+              <div className="col-lg-3 color-footer">
                 <small>Call us</small>
                 <div>
                   <a className="footer-phone number" href="tel:123455688766">
@@ -75,7 +75,7 @@ export const Footer = () => {
               <p className="footer-bottom">@Google.All Rights Reserved</p>
               <div className="footer-policy">
                 <p>Privacy Policy</p>
-                <p>Terms&Conditions</p>
+                <p className="ps-3">Terms&Conditions</p>
               </div>
             </div>
           </div>
