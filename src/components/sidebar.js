@@ -4,6 +4,7 @@ import { ProductlistContext } from "../App";
 const Sidebar = () => {
   const { productlist, setproductList } = useContext(ProductlistContext);
   const [mobiledata, setMobileData] = useState(productlist);
+  const [active, setActive] = useState("");
 
   const handleSubmit = () => {
     setproductList(mobiledata.filter((list) => list.company === "mobile"));
@@ -25,23 +26,23 @@ const Sidebar = () => {
   return (
     <div class="sidebar">
       <div>
-        <h4>Category</h4>
-        <ul>
-          <li>
-            <a onClick={handleSubmit}>Mobile</a>
-          </li>
-          <li>
-            <a onClick={handleSearch}> laptop</a>
-          </li>
-          <li>
-            {" "}
-            <a onClick={handleWatch}>watch</a>
-          </li>
-          <li>
-            <a onClick={handleComputer}>computer</a>
-          </li>
-        </ul>
-        <button className="btn btn-secondary sidebar_btn " onClick={handleFix}>
+        <h6>Category</h6>
+
+        <li>
+          <a onClick={handleSubmit}>Mobile</a>
+        </li>
+        <li>
+          <a onClick={handleSearch}> laptop</a>
+        </li>
+        <li>
+          {" "}
+          <a onClick={handleWatch}>watch</a>
+        </li>
+        <li>
+          <a onClick={handleComputer}>computer</a>
+        </li>
+
+        <button className="btn btn-secondary sidebar_btn" onClick={handleFix}>
           Clear Filters
         </button>
       </div>

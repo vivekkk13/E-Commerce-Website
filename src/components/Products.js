@@ -1,12 +1,19 @@
 import React, { useContext, useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { ProductlistContext } from "../App";
+import { Navbar } from "../common/Navbar";
+import { Cart } from "./Cart";
 import { DashboardLayout } from "./DashboardLayout";
 import Sidebar from "./sidebar";
 
 export const Products = () => {
-  const { productlist, setproductList } = useContext(ProductlistContext);
+  const { productlist, setproductList, cartlength, setCartLength } =
+    useContext(ProductlistContext);
   const [search, setSearch] = useState("");
-
+  const navigate = useNavigate();
+  const handleCart = (item) => {
+    setCartLength([...cartlength, item]);
+  };
   useEffect(() => {
     setproductList(productlist.filter((list) => list.name.includes(search)));
     console.log("productlist ==> ", search);
@@ -14,13 +21,10 @@ export const Products = () => {
 
   return (
     <DashboardLayout>
-      <div className="container-fluid">
-        <div className="row">
-          <div className="col-lg-2 ps-0">
-            <Sidebar />
-          </div>
-          <div className="col-lg-10">
-            <div className="featuess">
+      <div className="container">
+        <div className="products_colms">
+          <div className="row row_distance ">
+            <div className="col-lg-2 sidebar_dist ">
               <div class="input-group rounded search_bar">
                 <input
                   type="search"
@@ -32,35 +36,53 @@ export const Products = () => {
                   aria-describedby="search-addon"
                 />
               </div>
-              <div className="container">
-                <div className="row">
-                  {productlist.map((item) => (
-                    <div className="col-lg-3">
-                      <div className="features-service">
-                        <div className="features-content">
-                          <div className="cards-iphonee">
-                            <div className="cards-space">
-                              <img
-                                src={item.img}
-                                width="100%"
-                                className="img-iphone"
-                              />
-                              <div className="card-footer">
-                                <small>{item.name}</small>
-                                <small>${item.price}</small>
+              <Sidebar />
+            </div>
+            <div className="col-lg-8">
+              <div className="featuess">
+                <span className="product_span">
+                  {productlist.length} Total products
+                </span>
+                <div className="container">
+                  <div className="row">
+                    {productlist.map((item) => (
+                      <div className="col-lg-4">
+                        <div className="features-service">
+                          <div className="features-content">
+                            <div className="cards-iphonee">
+                              <div className="cards-space">
+                                <img
+                                  src={item.img}
+                                  width="100%"
+                                  className="img-iphone"
+                                />
+                                <div className="card-footer">
+                                  <small>{item.name}</small>
+                                  <small>${item.price}</small>
+                                </div>
+                                <button
+                                  className="btn btn-secondary footer_btn"
+                                  onClick={() => {
+                                    handleCart(item);
+                                  }}
+                                >
+                                  Add to cart
+                                </button>
                               </div>
                             </div>
                           </div>
                         </div>
                       </div>
-                    </div>
-                  ))}
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+      {/* <Navbar setcartItems={setcartItems} cartItems={cartItems} /> */}
+      {/* <Cart setcartItems={setcartItems} cartItems={cartItems} /> */}
     </DashboardLayout>
   );
 };
